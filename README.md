@@ -1,3 +1,5 @@
+# Secure Communication Channel with SEED Encryption
+
 The .cpp file is created under linux/UNIX environment.
 
 All the .txt, .dat files is not nercessery, only .cpp file is essential.
