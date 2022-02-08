@@ -1,0 +1,23 @@
+1. Alice run "keyGen" stored in directory Alice.
+2. Bob run "keyGen" stored in directory Bob.
+3. Alice run "host" to host server.
+4. Bob run "connect" to connect to server.
+5. Bob enter a client name.
+6. Bob run "gennonce" to generate random 4 byte nonce.
+7. Bob run "sha1" to hash public key.
+8. Bob sends (public key), (client name), (nonce), (SHA-1 hashed public key).
+9. Alice run "sha1" to hash (bob's public key).
+10. Alice run "verify" to match (bob's hashed public key) & (alice hashed bob's public key)
+11. Alice send (nonce from bob) and "Verified".
+12. Alice's terminal now shows client name and nonce.
+13. Bob run "verify" to check (nonce) & (nonce from alice).
+14. Bob send "Ready".
+15. Alice run "genskey" and "sha1" to hash (session key) & (Alice's public key).
+16. Alice run "encrypt" for (session key) with (bob's public key).
+17. Alice send (Alice's public key), (Hashed Alice's public key), (Encrypted Session Key), (SHA1 hashed Session Key)
+18. Bob verify (Alice's public key) with "sha1" matching.
+19. Bob decrypt (Encrypted Session Key) then verify with "sha1" matching.
+20. Bob use SEED encryption to encrypt "Acknowledge".
+21. Alice use SEED decryption then send SEED encrypted "Ready".
+22. Alice remake the session key.
+23. Bob remake the session key.
