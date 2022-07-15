@@ -7,31 +7,37 @@ All the .txt, .dat files is not nercessery, only .cpp file is essential.
 Note: Crypto++ 850 library is being used in this project
       Therefore, the cryptopp850 is needed for the compilation.
 
-Requirement:
-.cpp file is required at home directory
-cryptopp library
-alice/bob directory
+## Requirement
 
-How to run:
-Terminal command-
-Server: g++  server.cpp -o server cryptopp/libcryptopp.a
-	./server [port number]
+- .cpp file is required at home directory
 
-Client: g++ client.cpp -o client cryptopp/libcryptopp.a
-	./client [server ip adress] [port number]
+- crypto++ library
 
-Example run:
-Server: g++  server.cpp -o server
-	./server 54000
+- alice/bob directory
 
-Output(server): Waiting for a client to connect....
-       
-Client: g++ client.cpp -o client
-	./client 10.0.2.4 54000
+## Run with linux terminal
 
-Output(client): Connected to the server
+### Server
 
-Output(server): Connected with client!
-		Awaiting client response...
+Compile
+```
+g++  server.cpp -o server cryptopp/libcryptopp.a
+```
+Run
+```
+./server [port number]
+```
+
+### Client
+
+Compile
+```
+g++ client.cpp -o client cryptopp/libcryptopp.a
+```
+Run
+```
+./client [server ip adress] [port number]
+```
+<br />
 
 Use 'help' for more command
